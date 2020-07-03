@@ -2,7 +2,7 @@
 <h1>Projeto para calculo de seguro de veiculos</h1>
 <h4>URLS:</h4>
 <h6>POST:</h6>
-api/v1/seguro-veiculo/calcular-seguro-veiculo<br />
+/api/v1/seguro-veiculo/calcular-seguro-veiculo<br />
 body:
 <blockquote>
 {<br />
@@ -16,5 +16,5 @@ body:
 ========================================<br />
 <h6>GET:</h6>
 /api/v1/seguro-veiculo/relatorio<br />
-api/v1/seguro-veiculo/buscar-seguro/{cpf}<br />
-api/v1/seguro-veiculo/buscar-seguros/{cpf}
+/api/v1/seguro-veiculo/buscar-seguro/{cpf}<br />
+/api/v1/seguro-veiculo/buscar-seguros/{cpf}
