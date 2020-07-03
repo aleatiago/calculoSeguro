@@ -24,7 +24,7 @@ namespace Teste.Seguro
 
             double v_seguro = service.CalcularSeguro(input);
 
-            Assert.AreEqual(expect, v_seguro);
+            Assert.AreEqual(expect, v_seguro,"Valor não pode ser negativo");
         }
     }
 }
