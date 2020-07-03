@@ -6901,11 +6901,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSegugo\\Teste.Seguro.csproj",
+      "projectUniqueName": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSeguro\\Teste.Seguro.csproj",
       "projectName": "Teste.Seguro",
-      "projectPath": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSegugo\\Teste.Seguro.csproj",
+      "projectPath": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSeguro\\Teste.Seguro.csproj",
       "packagesPath": "C:\\Users\\1511 MXTI\\.nuget\\packages\\",
-      "outputPath": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSegugo\\obj\\",
+      "outputPath": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSeguro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

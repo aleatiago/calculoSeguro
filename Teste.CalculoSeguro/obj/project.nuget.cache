@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6ZWIM9C6Pfw1sowJYhbBN03epkqsLKCRDs22K2iQhRW8uMofpriNjI+yFktjs8beR+3nBdemoBRmHwv4/gPZYw==",
+  "dgSpecHash": "oXRQxxvNrr74zsV3O19iAuj1tGKxhI2ou5zNyG/Zrc/HklLrikcJaH9JVq0IlkN7L44ZjUWrZgT66sZOLmQq1A==",
   "success": true,
-  "projectFilePath": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSegugo\\Teste.Seguro.csproj",
+  "projectFilePath": "C:\\GITReps\\calculoSeguro\\Teste.CalculoSeguro\\Teste.Seguro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\1511 MXTI\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\1511 MXTI\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
