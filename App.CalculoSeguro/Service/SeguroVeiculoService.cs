@@ -38,8 +38,8 @@ namespace App.Seguro.Service
             double premioPuro = premioRisco * (1 + MARGEM_SEGURA);
             double premioComercial = (LUCRO * premioPuro) + premioPuro;
 
-            if (premioComercial < 0)
-                premioComercial = 0;
+            //if (premioComercial < 0)
+            //    premioComercial = 0;
 
             CalculoSeguroVeiculo model = new CalculoSeguroVeiculo { CPF = input.CPF, Idade = input.Idade, Marca_Modelo = input.Marca_Modelo, Nome = input.Nome, ValorVeiculo = input.ValorVeiculo, DataCalculo = DateTime.Now, IdCalculo = Guid.NewGuid(), Lucro = LUCRO, Margem = MARGEM_SEGURA, PremioComercial = premioComercial, PremioPuro = premioPuro, TaxaRisco = taxaRisco };
 
