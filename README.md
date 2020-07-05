@@ -1,5 +1,5 @@
 
-<h1>Projeto para calculo de seguro de veiculos</h1>
+<h1>Projeto para calculo de seguro de veículos</h1>
 
 <h2>App.Seguros</h2>
 <p>Aplicativo web api com .net core 2, os dados estão sendo persistidos em banco de dados oracle com entity framework</p>
