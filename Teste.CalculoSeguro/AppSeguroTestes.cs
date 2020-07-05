@@ -26,5 +26,24 @@ namespace Teste.Seguro
 
             Assert.AreEqual(expect, v_seguro,"Valor não pode ser negativo");
         }
+
+
+        [TestMethod]
+        public void TaxaDeveSer3eLucro5()
+        {
+            CalculoSeguroVeiculoInput input = new CalculoSeguroVeiculoInput();
+            input.ValorVeiculo = 10000;
+            double expect = 270.375;
+
+            var mockRepo = new Mock<ICalculoSeguroVeiculoRepository>();
+            mockRepo.Setup(x => x.CriarCalculoSeguro(new CalculoSeguroVeiculo())).Returns(true);
+            SeguroVeiculoService service = new SeguroVeiculoService(mockRepo.Object);
+
+            double v_seguro = service.CalcularSeguro(input);
+
+            Assert.AreEqual(expect, v_seguro, "taxa deve ser 3 e lucro 5");
+        }
+
+
     }
 }
