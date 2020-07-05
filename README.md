@@ -3,7 +3,7 @@
 
 <h2>App.Seguros</h2>
 <p>Aplicativo web api com .net core 2</p>
-<p>Os dados estão sendo persistidos em banco de dados oracle com entity framework</p>
+<p>Os dados estão sendo persistidos no banco de dados Oracle Database Express Edition (XE) Release 11.2.0.2.0 (11gR2) com Entity Framework</p>
 <p>Para a arquitetura do projeto foi utilizado DDD</p>
 <p>A politica de CORS está para aceitar informações de qualquer site, para facilitar o exemplo no ClientApp</p>
 <h4>URLS:</h4>
