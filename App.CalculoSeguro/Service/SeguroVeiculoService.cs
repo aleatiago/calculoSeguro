@@ -41,7 +41,7 @@ namespace App.Seguro.Service
             if (premioComercial < 0)
                 premioComercial = 0;
 
-            CalculoSeguroVeiculo model = new CalculoSeguroVeiculo { CPF = input.CPF, Idade = input.Idade, Marca_Modelo = input.Marca_Modelo, Nome = input.Nome, ValorVeiculo = input.ValorVeiculo, DataCalculo = DateTime.Now, IdCalculo = Guid.NewGuid(), Lucro = LUCRO, Margem = MARGEM_SEGURA, PremioComercial = premioComercial, PremioPuro = premioPuro, TaxaRisco = taxaRisco };
+            CalculoSeguroVeiculo model = new CalculoSeguroVeiculo { CPF = input.CPF, Idade = input.Idade, Marca = input.Marca,Modelo = input.Modelo, Veiculo = input.Veiculo, Nome = input.Nome, ValorVeiculo = input.ValorVeiculo, DataCalculo = DateTime.Now, IdCalculo = Guid.NewGuid(), Lucro = LUCRO, Margem = MARGEM_SEGURA, PremioComercial = premioComercial, PremioPuro = premioPuro, TaxaRisco = taxaRisco };
 
             _repo.CriarCalculoSeguro(model);
 

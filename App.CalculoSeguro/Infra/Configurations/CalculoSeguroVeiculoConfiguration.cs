@@ -22,7 +22,9 @@ namespace teste.Infra.Configurations
             builder.Property(x => x.PremioComercial).IsRequired();
             builder.Property(x => x.PremioPuro).IsRequired();
             builder.Property(x => x.TaxaRisco).IsRequired();
-            builder.Property(x => x.Marca_Modelo).IsRequired();
+            builder.Property(x => x.Marca).IsRequired();
+            builder.Property(x => x.Veiculo).IsRequired();
+            builder.Property(x => x.Modelo).IsRequired();
             builder.Property(x => x.Nome).IsRequired();
             builder.Property(x => x.ValorVeiculo).IsRequired();
             builder.Property(x => x.CPF).IsRequired();

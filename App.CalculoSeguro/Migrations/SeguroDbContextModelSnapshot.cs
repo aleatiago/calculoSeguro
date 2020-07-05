@@ -19,7 +19,7 @@ namespace App.Seguro.Migrations
                 .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            modelBuilder.Entity("teste.Models.CalculoSeguroVeiculo", b =>
+            modelBuilder.Entity("App.Seguro.Models.CalculoSeguroVeiculo", b =>
                 {
                     b.Property<Guid>("IdCalculo")
                         .ValueGeneratedOnAdd();
@@ -33,10 +33,13 @@ namespace App.Seguro.Migrations
 
                     b.Property<double>("Lucro");
 
-                    b.Property<string>("Marca_Modelo")
+                    b.Property<string>("Marca")
                         .IsRequired();
 
                     b.Property<double>("Margem");
+
+                    b.Property<string>("Modelo")
+                        .IsRequired();
 
                     b.Property<string>("Nome")
                         .IsRequired();
@@ -48,6 +51,9 @@ namespace App.Seguro.Migrations
                     b.Property<double>("TaxaRisco");
 
                     b.Property<double>("ValorVeiculo");
+
+                    b.Property<string>("Veiculo")
+                        .IsRequired();
 
                     b.HasKey("IdCalculo");
 

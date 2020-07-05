@@ -33,9 +33,19 @@ namespace teste
             services.AddScoped<IContext, SeguroDbContext>();
             services.AddTransient<ISeguroVeiculoService, SeguroVeiculoService>();
             services.AddTransient<ICalculoSeguroVeiculoRepository, CalculoSeguroVeiculoRepository>();
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("MyPolicy",
+                    builder => builder
+                    .SetIsOriginAllowed((host) => true)
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -44,12 +54,13 @@ namespace teste
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
+            app.UseCors("MyPolicy");
             app.UseHttpsRedirection();
             app.UseMvc();
+
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using App.Seguro.Models.Inputs;
 using App.Seguro.Service;
 using Microsoft.AspNetCore.Mvc;
