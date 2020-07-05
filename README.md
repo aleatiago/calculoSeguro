@@ -4,6 +4,8 @@
 <h2>App.Seguros</h2>
 <p>Aplicativo web api com .net core 2</p>
 <p>Os dados estão sendo persistidos em banco de dados oracle com entity framework</p>
+<p>Para a arquitetura do projeto foi utilizado DDD</p>
+<p>A politica de CORS está para aceitar informações de qualquer site, para facilitar o exemplo no ClientApp</p>
 <h4>URLS:</h4>
 <h6>POST:</h6>
 /api/v1/seguro-veiculo/calcular-seguro-veiculo<br />
