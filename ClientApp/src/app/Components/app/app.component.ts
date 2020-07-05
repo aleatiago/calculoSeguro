@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AppService } from './shared/app.service';
-import { Marca } from './shared/marca.model';
-import { Veiculo } from './shared/veiculo.model';
-import { Modelo } from './shared/modelo.model';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-import { DadosVeiculo } from './shared/dadosVeiculo.model';
+import { AppService } from '../shared/app.service';
+import { Marca } from '../shared/marca.model';
+import { Veiculo } from '../shared/veiculo.model';
+import { Modelo } from '../shared/modelo.model';
+import { DadosVeiculo } from '../shared/dadosVeiculo.model';
 
 @Component({
   selector: 'app-root',
