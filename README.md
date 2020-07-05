@@ -1,19 +1,24 @@
 
-<h1>Projeto para calculo de seguro de veiculos</h1>
+<h1>Projeto para cálculo de seguro de veículos</h1>
 
 <h2>App.Seguros</h2>
-<p>Aplicativo web api com .net core 2, os dados estão sendo persistidos em banco de dados oracle com entity framework</p>
+<p>Aplicativo web api com .net core 2</p>
+<p>Os dados estão sendo persistidos no banco de dados Oracle Database Express Edition (XE) Release 11.2.0.2.0 (11gR2) com Entity Framework</p>
+<p>Para a arquitetura do projeto foi utilizado DDD</p>
+<p>A politica de CORS está para aceitar informações de qualquer site, para facilitar o exemplo no ClientApp</p>
 <h4>URLS:</h4>
 <h6>POST:</h6>
 /api/v1/seguro-veiculo/calcular-seguro-veiculo<br />
 body:
 <blockquote>
 {<br />
-	"nome": "Alexandre",<br />
-	"cpf": "11122233399",<br />
-	"idade": "31",<br />
-	"marca_modelo": "Fiat-GranSiena",<br />
-   "valorVeiculo" : "40000.00"<br />
+CPF: "33544839890"<br />
+Idade: "31"<br />
+Marca: "Fiat"<br />
+Modelo: "2017"<br />
+Nome: "Alexandre Araujo Tiago"<br />
+ValorVeiculo: " 32701.00"<br />
+Veiculo: "MOBI WAY 1.0 Fire Flex 5p."<br />
 }
 </blockquote>
 ========================================<br />
