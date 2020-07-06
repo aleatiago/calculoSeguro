@@ -38,7 +38,7 @@
   <button type="submit" class="btn btn-primary mb-2">pesquisar</button>
 </form>
 
-<table class="table">
+<table *ngIf="!load; else elseBlock" class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -76,3 +76,4 @@
     </tr>
   </tbody>
 </table>
+<ng-template #elseBlock>Carregando...</ng-template>

@@ -16,7 +16,7 @@ export class RelatorioComponent implements OnInit {
   title = 'Relatórios';
   relMedias: RelatorioMedia[];
   todosSeguros: SeguroVeiculo[];
-  
+  load:boolean= true;
 
   constructor(
     private fb: FormBuilder,
@@ -28,10 +28,11 @@ export class RelatorioComponent implements OnInit {
   }
 
   submitForm(pesquisa) {
-
+    this.load = true;
     this.appService.getRelatorioTodosSegurosCPF(pesquisa.CPF)
       .subscribe(x => {
         this.todosSeguros = x;
+        this.load = false;
       });
 
 
@@ -44,6 +45,7 @@ export class RelatorioComponent implements OnInit {
 
     this.appService.getRelatorioTodosSeguros().subscribe(x => {
       this.todosSeguros = x;
+      this.load = false;
     });
 
   }
