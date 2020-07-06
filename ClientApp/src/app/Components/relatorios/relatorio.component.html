@@ -27,7 +27,16 @@
 
 
 <h2>Relatório de todos seguros: </h2>
-
+<form  [formGroup]="pesquisaForm" (ngSubmit)="submitForm(pesquisaForm.value)" class="form-inline">
+  <div class="form-group mb-2">
+    <label class="sr-only">Pesquisar cliente:</label>
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="CPF" class="sr-only">CPF</label>
+    <input formControlName="CPF" type="text" class="form-control" id="CPF" placeholder="CPF">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">pesquisar</button>
+</form>
 
 <table class="table">
   <thead>

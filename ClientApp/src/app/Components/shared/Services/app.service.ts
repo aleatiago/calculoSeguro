@@ -30,6 +30,12 @@ export class AppService {
             .pipe(catchError(this.handleError));
     }
 
+    getRelatorioTodosSegurosCPF(cpf: string): Observable<SeguroVeiculo[]> {
+        return this.http
+            .get(`${environment.apiGateway}/seguro-veiculo/buscar-seguros/${cpf}`, { headers: this.headers })
+            .pipe(catchError(this.handleError));
+    }
+
     getMarcas(): Observable<Marca[]> {
         return this.http
             .get(`http://fipeapi.appspot.com/api/1/carros/marcas.json`)
