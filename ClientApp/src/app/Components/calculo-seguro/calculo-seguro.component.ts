@@ -44,7 +44,6 @@ export class CalculoSeguroComponent implements OnInit {
   submitForm(SeguroInput) {
 
     SeguroInput.ValorVeiculo = SeguroInput.ValorVeiculo.replace("R$", "").replace(".","").replace(",",".");
-    alert(SeguroInput.ValorVeiculo);
     SeguroInput.Marca = this.dadosVeiculo.marca;
     SeguroInput.Veiculo = this.dadosVeiculo.veiculo;
     SeguroInput.Modelo = this.dadosVeiculo.ano_modelo;
