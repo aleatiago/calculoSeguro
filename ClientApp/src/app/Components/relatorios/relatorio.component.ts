@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../shared/Services/app.service';
 import { RelatorioMedia } from '../shared/Models/relatorioMedia.model';
+import { SeguroVeiculo } from '../shared/Models/seguroVeiculo.model';
 
 @Component({
   selector: 'relatorio',
@@ -12,6 +13,7 @@ export class RelatorioComponent implements OnInit {
 
   title = 'Relatórios';
   relMedias: RelatorioMedia[];
+  todosSeguros: SeguroVeiculo[];
   
 
   constructor(
@@ -23,8 +25,12 @@ export class RelatorioComponent implements OnInit {
   ngOnInit(): void {
     this.appService.getRelatorioMediaSeguro().subscribe(x => {
       this.relMedias = x;
-      console.log(x);
     });
+
+    this.appService.getRelatorioTodosSeguros().subscribe(x => {
+      this.todosSeguros = x;
+    });
+
   }
 
 

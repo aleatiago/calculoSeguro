@@ -52,12 +52,30 @@ namespace teste.Controllers
 
 
         [HttpGet]
-        [Route("relatorio")]
+        [Route("relatorio-media")]
         public ActionResult GetRelatorio()
         {
             try
             {
                 var seguro = _serv.Relatorio();
+
+                return Ok(seguro);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Ocorreu um erro ao consultar o relatório : {ex.Message}");
+            }
+        }
+
+
+
+        [HttpGet]
+        [Route("todos-seguros")]
+        public ActionResult GetTodosSeguros()
+        {
+            try
+            {
+                var seguro = _serv.TodosSeguros();
 
                 return Ok(seguro);
             }

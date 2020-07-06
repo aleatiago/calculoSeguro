@@ -9,6 +9,7 @@ import { Veiculo } from '../veiculo.model';
 import { Modelo } from '../Models/modelo.model';
 import { DadosVeiculo } from '../Models/dadosVeiculo.model';
 import { RelatorioMedia } from '../Models/relatorioMedia.model';
+import { SeguroVeiculo } from '../Models/seguroVeiculo.model';
 
 @Injectable()
 export class AppService {
@@ -19,7 +20,13 @@ export class AppService {
 
     getRelatorioMediaSeguro(): Observable<RelatorioMedia[]> {
         return this.http
-            .get(`${environment.apiGateway}/seguro-veiculo/relatorio`, { headers: this.headers })
+            .get(`${environment.apiGateway}/seguro-veiculo/relatorio-media`, { headers: this.headers })
+            .pipe(catchError(this.handleError));
+    }
+
+    getRelatorioTodosSeguros(): Observable<SeguroVeiculo[]> {
+        return this.http
+            .get(`${environment.apiGateway}/seguro-veiculo/todos-seguros`, { headers: this.headers })
             .pipe(catchError(this.handleError));
     }
 

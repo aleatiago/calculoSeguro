@@ -23,3 +23,47 @@
     </tr>
   </tbody>
 </table>
+
+
+
+<h2>Relatório de todos seguros: </h2>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Veículo</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Valor veículo</th>
+      <th scope="col">Margem</th>
+      <th scope="col">Lucro</th>
+      <th scope="col">Taxa de risco</th>
+      <th scope="col">Prêmio puro</th>
+      <th scope="col">Prêmio comercial</th>
+      <th scope="col">Data do cálculo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of todosSeguros; let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{r.nome}}</td>
+      <td>{{r.cpf}}</td>
+      <td>{{r.idade}}</td>
+      <td>{{r.marca}}</td>
+      <td>{{r.veiculo}}</td>
+      <td>{{r.modelo}}</td>
+      <td>{{r.valorVeiculo | currency: 'BRL'}}</td>
+      <td>{{r.margem * 100}}%</td>
+      <td>{{r.lucro * 100}}%</td>
+      <td>{{r.taxaRisco* 100}}%</td>
+      <td>{{r.premioPuro | currency: 'BRL'}}</td>
+      <td>{{r.premioComercial | currency: 'BRL'}}</td>
+      <td>{{r.dataCalculo | date:'dd/MM/yyyy'}}</td>
+    </tr>
+  </tbody>
+</table>

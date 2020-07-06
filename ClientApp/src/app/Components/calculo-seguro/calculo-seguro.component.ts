@@ -51,6 +51,7 @@ export class CalculoSeguroComponent implements OnInit {
     this.appService.postCriarSeguro(SeguroInput)
       .subscribe(x => {
         this.valorSeguro = x;
+        this.seguroForm.reset();
       });
 
 

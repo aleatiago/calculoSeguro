@@ -14,6 +14,8 @@ namespace App.Seguro.Service
     {
         double CalcularSeguro(CalculoSeguroVeiculoInput input);
         List<RelatorioMediaSeguroViewModel> Relatorio();
+
+        List<CalculoSeguroVeiculo> TodosSeguros();
         CalculoSeguroVeiculo BuscarSeguro(string cpf);
         List<CalculoSeguroVeiculo> BuscarSeguros(string cpf);
 
@@ -56,6 +58,14 @@ namespace App.Seguro.Service
             var seguros = _repo.BuscarTodosRegistros();
 
             return seguros.GroupBy(x => x.CPF).Select(g=> new RelatorioMediaSeguroViewModel { CPF = g.Key, Media = g.Sum(x => x.PremioComercial) / g.Count() }).ToList();
+        }
+
+
+        public List<CalculoSeguroVeiculo> TodosSeguros()
+        {
+            var seguros = _repo.BuscarTodosRegistros();
+
+            return seguros;
         }
 
         public CalculoSeguroVeiculo BuscarSeguro(string cpf)
