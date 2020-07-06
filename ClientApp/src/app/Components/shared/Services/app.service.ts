@@ -1,13 +1,14 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
-import { SeguroInput } from './seguroInput.model';
+import { SeguroInput } from '../Inputs/seguroInput.model';
 import { environment } from 'src/environments/environment';
 import { catchError } from 'rxjs/operators';
-import { Marca } from './marca.model';
-import { Veiculo } from './veiculo.model';
-import { Modelo } from './modelo.model';
-import { DadosVeiculo } from './dadosVeiculo.model';
+import { Marca } from '../Models/marca.model';
+import { Veiculo } from '../veiculo.model';
+import { Modelo } from '../Models/modelo.model';
+import { DadosVeiculo } from '../Models/dadosVeiculo.model';
+import { RelatorioMedia } from '../Models/relatorioMedia.model';
 
 @Injectable()
 export class AppService {
@@ -16,7 +17,7 @@ export class AppService {
 
     constructor(private http: HttpClient) { }
 
-    getRelatorioSeguro(): Observable<SeguroInput[]> {
+    getRelatorioMediaSeguro(): Observable<RelatorioMedia[]> {
         return this.http
             .get(`${environment.apiGateway}/seguro-veiculo/relatorio`, { headers: this.headers })
             .pipe(catchError(this.handleError));

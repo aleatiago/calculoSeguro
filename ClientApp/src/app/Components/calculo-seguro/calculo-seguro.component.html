@@ -1,0 +1,84 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Bem vindo!
+  </h1>
+</div>
+<h2>Digite as informações abaixo para calcular o seguro do seu veículo: </h2>
+
+<div class="row">
+  <div class="col-md-8 order-md-1">
+    <form [formGroup]="seguroForm" (ngSubmit)="submitForm(seguroForm.value)" class="needs-validation" novalidate>
+
+      <div class="mb-3">
+        <label for="Nome">Nome</label>
+        <input formControlName="Nome" type="text" class="form-control" id="Nome"
+          placeholder="informe seu nome" value="" required>
+        <div class="invalid-feedback">
+          digite um nome válido.
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="CPF">CPF</label>
+        <div class="input-group">
+          <input formControlName="CPF" type="text" class="form-control" id="CPF"
+            placeholder="informe sua idade" required>
+
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Idade">Idade</label>
+        <div class="input-group">
+          <input formControlName="Idade" type="text" class="form-control" id="Idade"
+            placeholder="informe sua idade" required>
+          <div class="invalid-feedback" style="width: 100%;">
+            sua idade é obrigatória.
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Marca">Selecione a marca do veículo</label>
+        <select class="form-control" (ngModelChange)="onMarcaChange($event)" formControlName="Marca" id="Marca">
+          <option></option>
+          <option [value]="m.id" *ngFor="let m of marcas">{{m.name}}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="Modelo">Selecione o veículo</label> 
+        <select class="form-control" (ngModelChange)="onVeiculoChange($event)" formControlName="Veiculo" id="Veiculo">
+          <option></option>
+          <option [value]="v.id" *ngFor="let v of veiculos">{{v.name}}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="Modelo">Selecione o modelo</label> 
+        <select class="form-control" (ngModelChange)="onModeloChange($event)"  formControlName="Modelo" id="Modelo">
+          <option></option>
+          <option [value]="m.id" *ngFor="let m of modelos">{{m.name}}</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="ValorVeiculo">Valor do veículo</label>
+        <input formControlName="ValorVeiculo" type="text" class="form-control" id="ValorVeiculo"
+          placeholder="">
+      </div>
+      <hr class="mb-4">
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Calcular valor do seguro</button>
+    </form>
+  </div>
+
+
+  <div class="col-md-4 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span>Valor do seu seguro: <span class="badge badge-success">R{{ valorSeguro | currency}}</span></span>
+    </h4>
+  </div>
+
+</div>

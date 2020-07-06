@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Bem vindo!
+  </h1>
+</div>
+<h2>Relatório de média por cliente: </h2>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Média</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of relMedias; let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{r.cpf}}</td>
+      <td>R{{r.media | currency}}</td>
+    </tr>
+  </tbody>
+</table>
