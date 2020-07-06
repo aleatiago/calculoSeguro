@@ -23,7 +23,8 @@ Veiculo: "MOBI WAY 1.0 Fire Flex 5p."<br />
 </blockquote>
 ========================================<br />
 <h6>GET:</h6>
-/api/v1/seguro-veiculo/relatorio<br />
+/api/v1/seguro-veiculo/relatorio-media<br />
+/api/v1/seguro-veiculo/todos-seguros<br />
 /api/v1/seguro-veiculo/buscar-seguro/{cpf}<br />
 /api/v1/seguro-veiculo/buscar-seguros/{cpf}
 
@@ -33,8 +34,8 @@ Veiculo: "MOBI WAY 1.0 Fire Flex 5p."<br />
 <p>Aplicativo MS Teste para cobertura de teste do App.Teste</p>
 
 <h6>Metodos de teste:</h6>
-<p>ValorNaoPodeSerNegativo()</p>
-<p>TaxaDeveSer3eLucro5()</p>
+ValorNaoPodeSerNegativo()<br />
+TaxaDeveSer3eLucro5()<br />
 
 
 <h2>ClientApp</h2>
