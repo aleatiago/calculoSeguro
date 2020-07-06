@@ -7,14 +7,23 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppService } from './Components/shared/Services/app.service';
 import { RelatorioComponent } from './Components/relatorios/relatorio.component';
 import { CalculoSeguroComponent } from './Components/calculo-seguro/calculo-seguro.component';
+import { CPFPipe } from './Components/shared/pipes/cpf.pipes';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
+const maskConfig: Partial<IConfig> = {
+};
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RelatorioComponent,
-    CalculoSeguroComponent
+    CalculoSeguroComponent,
+    CPFPipe,
+
   ],
   imports: [
+    NgxMaskModule.forRoot(maskConfig),
     BrowserModule,
     AppRoutingModule,
     FormsModule,
