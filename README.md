@@ -34,8 +34,8 @@ Veiculo: "MOBI WAY 1.0 Fire Flex 5p."<br />
 <p>Aplicativo MS Teste para cobertura de teste do App.Teste</p>
 
 <h6>Metodos de teste:</h6>
-<p>ValorNaoPodeSerNegativo()</p>
-<p>TaxaDeveSer3eLucro5()</p>
+ValorNaoPodeSerNegativo()<br />
+TaxaDeveSer3eLucro5()<br />
 
 
 <h2>ClientApp</h2>
