@@ -23,7 +23,8 @@ Veiculo: "MOBI WAY 1.0 Fire Flex 5p."<br />
 </blockquote>
 ========================================<br />
 <h6>GET:</h6>
-/api/v1/seguro-veiculo/relatorio<br />
+/api/v1/seguro-veiculo/relatorio-media<br />
+/api/v1/seguro-veiculo/todos-seguros<br />
 /api/v1/seguro-veiculo/buscar-seguro/{cpf}<br />
 /api/v1/seguro-veiculo/buscar-seguros/{cpf}
 
