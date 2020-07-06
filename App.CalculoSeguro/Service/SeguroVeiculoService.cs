@@ -1,10 +1,11 @@
 ﻿using App.Seguro.Infra.Repository;
 using App.Seguro.Models;
 using App.Seguro.Models.Inputs;
+using App.Seguro.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace App.Seguro.Service
 {
@@ -12,7 +13,7 @@ namespace App.Seguro.Service
     public interface ISeguroVeiculoService
     {
         double CalcularSeguro(CalculoSeguroVeiculoInput input);
-        List<CalculoSeguroVeiculo> Relatorio();
+        List<RelatorioMediaSeguroViewModel> Relatorio();
         CalculoSeguroVeiculo BuscarSeguro(string cpf);
         List<CalculoSeguroVeiculo> BuscarSeguros(string cpf);
 
@@ -50,9 +51,11 @@ namespace App.Seguro.Service
         }
 
 
-        public List<CalculoSeguroVeiculo> Relatorio()
+        public List<RelatorioMediaSeguroViewModel> Relatorio()
         {
-            return _repo.BuscarTodosRegistros();
+            var seguros = _repo.BuscarTodosRegistros();
+
+            return seguros.GroupBy(x => x.CPF).Select(g=> new RelatorioMediaSeguroViewModel { CPF = g.Key, Media = g.Sum(x => x.PremioComercial) / g.Count() }).ToList();
         }
 
         public CalculoSeguroVeiculo BuscarSeguro(string cpf)
